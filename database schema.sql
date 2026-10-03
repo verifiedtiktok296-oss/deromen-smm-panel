@@ -1,0 +1,1 @@
+-- Flask initializes the Phase 1 SQLite schema automatically.
