@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
 DB = BASE / 'deromen.db'
-app = Flask(__name__, template_folder=str(ROOT/'frontend'), static_folder=str(ROOT/'frontend/css'), static_url_path='/static/css')
+app = Flask(__name__, template_folder=str(BASE/'templates'), static_folder=str(BASE/'static'), static_url_path='/static')
 app.secret_key = os.getenv('SECRET_KEY', 'dev-only-change-me')
 
 def db():
