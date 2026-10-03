@@ -1,0 +1,1 @@
+function toggleMenu(){document.getElementById('menu').classList.toggle('open')}document.addEventListener('click',e=>{const m=document.getElementById('menu'),b=document.querySelector('.menu-btn');if(m&&m.classList.contains('open')&&!m.contains(e.target)&&e.target!==b)m.classList.remove('open')});
