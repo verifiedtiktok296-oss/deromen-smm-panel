@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>📋 Orders</h1>{% if orders %}{% for o in orders %}<div class="card"><h2>#{{o['id']}} — {{o['service_name'] or 'Service'}}</h2><p>Quantity: {{o['quantity']}}<br>Charge: Rs. {{'%.2f'|format(o['charge'])}}<br>Status: {{o['status']}}</p></div>{% endfor %}{% else %}<div class="card">No orders yet.</div>{% endif %}{% endblock %}
